@@ -42,7 +42,12 @@ struct StartView: View {
                             .cornerRadius(10)
                     }
                     
-                    NavigationLink(destination: LoginView()) {
+                    NavigationLink {
+                 
+                        LoginView().navigationBarBackButtonHidden(true)
+                    } label: {
+                   
+                    
                         HStack {
                             Text("Already have an account?")
                                 .font(.caption)

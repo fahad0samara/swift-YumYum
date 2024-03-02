@@ -7,12 +7,62 @@
 
 import SwiftUI
 
-struct FeaturedRecipeCard: View {
+struct FeaturedRecipeCard0: View {
+    let foodItem: FoodItem
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading, spacing: 10) {
+            ZStack(alignment: .topTrailing) {
+                Image(foodItem.imageName)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 150, height: 150)
+                    .cornerRadius(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.gray, lineWidth: 1)
+                    )
+                
+                Button(action: {
+                    // Action for adding to favorites
+                }) {
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.white)
+                        .padding(8)
+                        .background(Color.orange)
+                        .clipShape(Circle())
+                        .padding(5)
+                }
+            }
+            
+            VStack(alignment: .leading, spacing: 5) {
+                Text(foodItem.name)
+                    .font(.headline)
+                    .fontWeight(.bold)
+                    .foregroundColor(.primary)
+                    .lineLimit(2)
+                
+            
+                
+                HStack {
+                    Text("$\(String(format: "%.2f", foodItem.price))")
+                        .font(.subheadline)
+                        .foregroundColor(.orange)
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        // Action for adding to cart
+                    }) {
+                        Image(systemName: "cart.fill")
+                            .foregroundColor(.orange)
+                            .font(.headline)
+                    }
+                }
+            }
+        }
+        .frame(width: 150)
     }
 }
 
-#Preview {
-    FeaturedRecipeCard()
-}
+

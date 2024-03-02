@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct FoodItem: Identifiable, Codable {
+    let id = UUID()
+    let name: String
+    let description: String
+    let price: Double
+    let calories: Int
+    let category: String
+    let imageName:String
+    // Add more properties as needed
+}
+

@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct YumYumApp: App {
+    @StateObject var cartViewModel = CartViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabViewNav()
+                .environmentObject(cartViewModel)
         }
     }
 }
+
+

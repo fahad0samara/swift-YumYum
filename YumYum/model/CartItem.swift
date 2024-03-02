@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+
+// Model representing an item in the cart
+struct CartItem {
+    let foodItem: FoodItem
+    var quantity: Int
+}

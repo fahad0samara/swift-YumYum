@@ -8,10 +8,34 @@
 import SwiftUI
 
 struct TabViewNav: View {
+    @EnvironmentObject var cartViewModel:CartViewModel // Access CartViewModel from the environment
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            HomeView()
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+            
+            CartView().environmentObject(cartViewModel) // Inject the CartViewModel here
+
+                .tabItem {
+                    Image(systemName: "heart")
+                    Text("Favorites")
+                }
+                .badge(cartViewModel.cartItemsCount) 
+            ProfileView()
+                .tabItem {
+                    Image(systemName: "person")
+                    Text("Profile")
+                }
+        }
+        .accentColor(.orange)
     }
 }
+
+
 
 #Preview {
     TabViewNav()
