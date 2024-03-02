@@ -1,62 +1,62 @@
+//
+//  CoreDataViewModel.swift
+//  YumYum
+//
+//  Created by fahad samara on 3/2/24.
+//
+
+
+//
+
+import Foundation
+import CoreData
+
 import Foundation
 import CoreData
 
 class CoreDataViewModel: ObservableObject {
-    let container = NSPersistentContainer(name: "AppDataModel")
-    
-    @Published var foodItems: [FoodItem] = []
-    @Published var cartItems: [CartItemEntity] = []
+    let container: NSPersistentContainer
+    @Published var foodItems: [FoodEntity] = []
     
     init() {
+        container = NSPersistentContainer(name: "FoodItem")
         container.loadPersistentStores { description, error in
             if let error = error {
                 print("Failed to load the data \(error.localizedDescription)")
             }
         }
-        fetchCartItems()
+        fetchFoodItems()
     }
-
-
-
     
-
-    
-    func fetchCartItems() {
-        let request: NSFetchRequest<CartItemEntity> = CartItemEntity.fetchRequest()
+    private func fetchFoodItems() {
+        let request: NSFetchRequest<FoodEntity> = FoodEntity.fetchRequest()
         
         do {
-            cartItems = try container.viewContext.fetch(request)
-            print("Fetched cart items: \(cartItems)")
+            foodItems = try container.viewContext.fetch(request)
+            print("Fetched food items: \(foodItems)")
         } catch {
-            print("Error fetching cart items: \(error)")
+            print("Error fetching food items: \(error)")
         }
     }
-    
-    func save(context: NSManagedObjectContext) {
+
+    func save() {
+        let context = container.viewContext
         do {
             try context.save()
             print("Data saved")
-            
-            fetchCartItems()
+            fetchFoodItems()
         } catch {
-            print("Unable to save data")
+            print("Unable to save data: \(error)")
         }
     }
     
-    // Assuming you have a function to add an item to the cart in your CoreDataViewModel
-    func addToCart(foodItem: FoodItem, quantity: Int, context: NSManagedObjectContext) {
-        let cartItem = CartItemEntity(context: context)
-        cartItem.id = UUID()
-        cartItem.foodItemId = foodItem.id
-        cartItem.foodItem = foodItem  // Set the relationship to the corresponding FoodItem entity
-        cartItem.quantity = Int16(quantity)
+    func addFood(name: String) {
+        let context = container.viewContext
+        let food = FoodEntity(context: context)
+        food.id = UUID()
+        food.name = name
         
-        save(context: context)
+        save()
     }
-
-
-        func removeFromCart(cartItem: CartItemEntity) {
-            container.viewContext.delete(cartItem)
-            save(context: container.viewContext)
-        }
 }
+

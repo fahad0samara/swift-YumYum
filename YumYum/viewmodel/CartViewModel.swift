@@ -11,7 +11,6 @@ import Foundation
 import CoreData
 
 
-// View model to manage the cart state
 class CartViewModel: ObservableObject {
     @Published var cartItems: [CartItem] = []
     
@@ -29,16 +28,6 @@ class CartViewModel: ObservableObject {
         cartItems.reduce(0) { $0 + ($1.foodItem.price * Double($1.quantity)) }
     }
     
-    // Calculate the total price of items in the cart including tax
-    var totalPriceWithTax: Double {
-        subtotalPrice + taxAmount
-    }
-    
-    // Calculate the tax amount
-    var taxAmount: Double {
-        subtotalPrice * 0.10 // Assuming a fixed tax rate of 10%
-    }
-    
     // Retrieve the count of cart items
     var cartItemsCount: Int {
         cartItems.count
@@ -50,8 +39,14 @@ class CartViewModel: ObservableObject {
             cartItems.remove(at: index)
         }
     }
+    
+    // Update the quantity of an item in the cart
+    func updateQuantity(_ cartItem: CartItem, quantity: Int) {
+        if let index = cartItems.firstIndex(where: { $0.foodItem.name == cartItem.foodItem.name }) {
+            cartItems[index].quantity = quantity
+        }
+    }
 }
-
 
 
 

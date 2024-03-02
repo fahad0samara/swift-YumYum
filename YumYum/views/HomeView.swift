@@ -4,8 +4,7 @@ struct HomeView: View {
     @ObservedObject var viewModel = FoodViewModel()
     @State private var selectedCategory: String = "Burgers"
     @EnvironmentObject var cartViewModel: CartViewModel
-
-
+    @EnvironmentObject var favoritesViewModel: FavoritesViewModel
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
@@ -34,9 +33,14 @@ struct HomeView: View {
                 // Featured recipes list
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
                     ForEach(filteredFoodItems) { foodItem in
-                        FeaturedRecipeCard(foodItem: foodItem, addToCartAction: {
-                            cartViewModel.addItem(foodItem)
-                        })
+                        FeaturedRecipeCard(foodItem: foodItem,
+                                           addToCartAction: { cartViewModel.addItem(foodItem) },
+                                           addToFavoritesAction: { favoritesViewModel.addToFavorites(foodItem) })
+                    
+                
+                        
+                                
+                        
 
 
 
@@ -63,6 +67,8 @@ struct HomeView: View {
 struct FeaturedRecipeCard: View {
     let foodItem: FoodItem
     let addToCartAction: () -> Void
+    let addToFavoritesAction: () -> Void
+
 
     
     var body: some View {
@@ -79,7 +85,7 @@ struct FeaturedRecipeCard: View {
                     )
                 
                 Button(action: {
-                    addToCartAction() // Add to cart action
+                    addToFavoritesAction()
 
                 }) {
                     Image(systemName: "heart.fill")
@@ -108,7 +114,7 @@ struct FeaturedRecipeCard: View {
                     Spacer()
                     
                     Button(action: {
-                        // Action for adding to cart
+                        addToCartAction() // Add to cart action
                     }) {
                         Image(systemName: "cart.fill")
                             .foregroundColor(.orange)

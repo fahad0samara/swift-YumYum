@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		293937A52B9313C100D2B535 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293937A42B9313C100D2B535 /* CartItem.swift */; };
 		293937A72B93140F00D2B535 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293937A62B93140F00D2B535 /* CartViewModel.swift */; };
+		293937B72B93A59000D2B535 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293937B62B93A59000D2B535 /* FavoritesViewModel.swift */; };
 		2976F5AF2B919D6D003D01AF /* YumYumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976F5AE2B919D6D003D01AF /* YumYumApp.swift */; };
 		2976F5B12B919D6D003D01AF /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976F5B02B919D6D003D01AF /* StartView.swift */; };
 		2976F5B32B919D6E003D01AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2976F5B22B919D6E003D01AF /* Assets.xcassets */; };
@@ -17,7 +18,7 @@
 		2976F5C32B91A9FD003D01AF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976F5C22B91A9FD003D01AF /* LoginView.swift */; };
 		2976F5C62B91BAFD003D01AF /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976F5C52B91BAFD003D01AF /* CartView.swift */; };
 		2976F5C82B91BB16003D01AF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976F5C72B91BB16003D01AF /* HomeView.swift */; };
-		2976F5CA2B91BB2D003D01AF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976F5C92B91BB2D003D01AF /* ProfileView.swift */; };
+		2976F5CA2B91BB2D003D01AF /* FavoritView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976F5C92B91BB2D003D01AF /* FavoritView.swift */; };
 		2976F5CC2B91BBAF003D01AF /* TabViewNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976F5CB2B91BBAF003D01AF /* TabViewNav.swift */; };
 		2976F5CE2B91C4FD003D01AF /* food_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2976F5CD2B91C4FD003D01AF /* food_data.json */; };
 		2976F5D02B91CD69003D01AF /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976F5CF2B91CD69003D01AF /* FoodItem.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		293937A42B9313C100D2B535 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 		293937A62B93140F00D2B535 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		293937B62B93A59000D2B535 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		2976F5AB2B919D6D003D01AF /* YumYum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YumYum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2976F5AE2B919D6D003D01AF /* YumYumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YumYumApp.swift; sourceTree = "<group>"; };
 		2976F5B02B919D6D003D01AF /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -38,7 +40,7 @@
 		2976F5C22B91A9FD003D01AF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2976F5C52B91BAFD003D01AF /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		2976F5C72B91BB16003D01AF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		2976F5C92B91BB2D003D01AF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2976F5C92B91BB2D003D01AF /* FavoritView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritView.swift; sourceTree = "<group>"; };
 		2976F5CB2B91BBAF003D01AF /* TabViewNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewNav.swift; sourceTree = "<group>"; };
 		2976F5CD2B91C4FD003D01AF /* food_data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = food_data.json; sourceTree = "<group>"; };
 		2976F5CF2B91CD69003D01AF /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
@@ -102,7 +104,7 @@
 				2976F5C42B91BA12003D01AF /* auth */,
 				2976F5AE2B919D6D003D01AF /* YumYumApp.swift */,
 				2976F5B02B919D6D003D01AF /* StartView.swift */,
-				2976F5C92B91BB2D003D01AF /* ProfileView.swift */,
+				2976F5C92B91BB2D003D01AF /* FavoritView.swift */,
 				2976F5CB2B91BBAF003D01AF /* TabViewNav.swift */,
 			);
 			path = views;
@@ -114,6 +116,7 @@
 				2976F5CD2B91C4FD003D01AF /* food_data.json */,
 				2976F5D12B91CDBF003D01AF /* FoodViewModel.swift */,
 				293937A62B93140F00D2B535 /* CartViewModel.swift */,
+				293937B62B93A59000D2B535 /* FavoritesViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				293937B72B93A59000D2B535 /* FavoritesViewModel.swift in Sources */,
 				2976F5D22B91CDBF003D01AF /* FoodViewModel.swift in Sources */,
 				2976F5D82B923DF2003D01AF /* FeaturedRecipeCard.swift in Sources */,
 				293937A72B93140F00D2B535 /* CartViewModel.swift in Sources */,
@@ -244,7 +248,7 @@
 				2976F5C82B91BB16003D01AF /* HomeView.swift in Sources */,
 				2976F5C32B91A9FD003D01AF /* LoginView.swift in Sources */,
 				2976F5D62B923D74003D01AF /* CategoryButton.swift in Sources */,
-				2976F5CA2B91BB2D003D01AF /* ProfileView.swift in Sources */,
+				2976F5CA2B91BB2D003D01AF /* FavoritView.swift in Sources */,
 				293937A52B9313C100D2B535 /* CartItem.swift in Sources */,
 				2976F5AF2B919D6D003D01AF /* YumYumApp.swift in Sources */,
 			);

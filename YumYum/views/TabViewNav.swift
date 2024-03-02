@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct TabViewNav: View {
-    @EnvironmentObject var cartViewModel:CartViewModel // Access CartViewModel from the environment
+    @EnvironmentObject var cartViewModel: CartViewModel
+    @EnvironmentObject var favoritesViewModel: FavoritesViewModel // Add FavoritesViewModel
     
     var body: some View {
         TabView {
@@ -17,19 +18,20 @@ struct TabViewNav: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            
-            CartView().environmentObject(cartViewModel) // Inject the CartViewModel here
 
+            CartView()
+                .tabItem {
+                    Image(systemName: "cart.fill")
+                    Text("Cart")
+                }
+                .badge(cartViewModel.cartItemsCount)
+
+            FavoritView()
                 .tabItem {
                     Image(systemName: "heart")
-                    Text("Favorites")
+                    Text("Favorite")
                 }
-                .badge(cartViewModel.cartItemsCount) 
-            ProfileView()
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("Profile")
-                }
+                .badge(favoritesViewModel.favoriteItemsCount()) 
         }
         .accentColor(.orange)
     }

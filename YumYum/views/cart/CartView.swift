@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct CartView: View {
     @EnvironmentObject var cartViewModel: CartViewModel
     
@@ -46,6 +45,7 @@ struct CartView: View {
                     }
                     .padding(.vertical, 5)
                 }
+                .padding(.bottom)
                 
                 HStack {
                     Spacer()
@@ -56,25 +56,25 @@ struct CartView: View {
                         .background(Color.orange)
                         .foregroundColor(.white)
                         .cornerRadius(20)
-                    
-                    Button(action: {
-                        // Action for checkout
-                        // Implement your checkout logic here
-                    }) {
-                        Text("Checkout")
-                            .font(.headline)
-                            .padding(.vertical, 10)
-                            .padding(.horizontal, 20)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(20)
-                    }
                     Spacer()
                 }
                 .padding(.vertical, 10)
             }
+            
+            Button(action: {
+                // Action for checkout or payment
+            }) {
+                Text("Checkout")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.orange)
+                    .cornerRadius(10)
+                    .padding(.horizontal, 40)
+            }
+            .padding()
         }
-        .padding()
         .navigationBarTitle("Cart")
     }
 }
