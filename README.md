@@ -1,8 +1,21 @@
 # YumYum App
 
+
 YumYum is a food discovery app that allows users to explore a variety of delicious dishes and add their favorite items to the cart and favorites list.
 
 ## Screenshots
+
+
+| Screenshot 1                                    | Screenshot 2                                    | Screenshot 3                                    | Screenshot 4                                    |
+|-------------------------------------------------|-------------------------------------------------|-------------------------------------------------|-------------------------------------------------|
+| ![Screenshot 3](https://github.com/fahad0samara/swift-YumYum/assets/90055525/a756b4ed-ef87-41f0-b31f-4aeed2c3ea65) | ![Screenshot 4](https://github.com/fahad0samara/swift-YumYum/assets/90055525/cdcb4052-d095-401b-b186-62de32b5ef44) |  ![Screenshot 1](https://github.com/fahad0samara/swift-YumYum/assets/90055525/c7bf04a1-e18c-41f5-b1a6-41186cef7c93) | ![Screenshot 2](https://github.com/fahad0samara/swift-YumYum/assets/90055525/a4d1023d-1814-4e22-a7d4-ac8b09f68f6a) | ![Screenshot 3](https://github.com/fahad0samara/swift-YumYum/assets/90055525/a756b4ed-ef87-41f0-b31f-4aeed2c3ea65) | ![Screenshot 4](https://github.com/fahad0samara/swift-YumYum/assets/90055525/cdcb4052-d095-401b-b186-62de32b5ef44) 
+
+| Screenshot 5                                    | Screenshot 6                                    | Screenshot 7                                    |
+|-------------------------------------------------|-------------------------------------------------|-------------------------------------------------|
+| ![Screenshot 5](https://github.com/fahad0samara/swift-YumYum/assets/90055525/5dbbd444-2768-4259-8400-9363c0b34e2e) | ![Screenshot 6](https://github.com/fahad0samara/swift-YumYum/assets/90055525/ed73368d-2e5e-4e66-99cd-47e965ae55c3) | ![Screenshot 7](https://github.com/fahad0samara/swift-YumYum/assets/90055525/40a779ba-44a1-449e-8a3c-efabd00a199c) |
+
+
+
 
 
 ## Features
