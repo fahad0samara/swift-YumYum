@@ -15,6 +15,5 @@ struct FoodItem: Identifiable, Codable {
     let calories: Int
     let category: String
     let imageName:String
-    // Add more properties as needed
 }
 
