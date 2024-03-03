@@ -45,9 +45,7 @@ YumYum is a food discovery app that allows users to explore a variety of delicio
 
 Contributions are welcome! If you have any suggestions, bug fixes, or feature enhancements, feel free to submit a pull request.
 
-## Credits
 
-- [OpenFoodFacts](https://world.openfoodfacts.org/): Food data used in this app is sourced from OpenFoodFacts, an open database for food products from around the world.
 
 ## License
 
