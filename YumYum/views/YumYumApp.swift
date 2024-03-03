@@ -13,7 +13,7 @@ struct YumYumApp: App {
     @StateObject var favoritViewModel = FavoritesViewModel()
     var body: some Scene {
         WindowGroup {
-            TabViewNav()
+            SignUpView()
                 .environmentObject(cartViewModel)
                 .environmentObject(favoritViewModel)
 

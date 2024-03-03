@@ -13,14 +13,9 @@ struct SignUpView: View {
     @State private var confirmPassword = ""
     
     var body: some View {
-
+        NavigationStack{
             VStack {
-                Image("signup_image")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 150)
-                    .padding(.bottom, 30)
-                
+              Spacer()
                 Text("Welcome to YumYum")
                     .font(.largeTitle)
                     .fontWeight(.bold)
@@ -42,9 +37,9 @@ struct SignUpView: View {
                     .padding(.horizontal)
                     .padding(.bottom, 20)
                 
-                Button(action: {
-                    // Action for sign up button
-                }) {
+                NavigationLink(destination: TabViewNav().navigationBarBackButtonHidden(true)){
+                    
+                    
                     Text("Sign Up")
                         .font(.headline)
                         .foregroundColor(.white)
@@ -53,6 +48,7 @@ struct SignUpView: View {
                         .cornerRadius(10)
                 }
                 .padding(.bottom, 20)
+                
                 
                 HStack {
                     Text("Already have an account?")
@@ -75,6 +71,7 @@ struct SignUpView: View {
             .padding()
         }
     }
+}
 
 
 struct ForgotPasswordView: View {
