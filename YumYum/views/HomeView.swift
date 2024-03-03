@@ -5,12 +5,81 @@ struct HomeView: View {
     @State private var selectedCategory: String = "Burgers"
     @EnvironmentObject var cartViewModel: CartViewModel
     @EnvironmentObject var favoritesViewModel: FavoritesViewModel
+    @State var searchText:String = ""
     var body: some View {
         NavigationStack{
             ScrollView {
+                VStack(spacing: 20) {
+                    HStack {
+                        VStack(alignment: .leading, spacing: 10){
+                            HStack(alignment: .center) {
+                                Text(greetingText)
+                                    .font(.title)
+                                    .italic()
+                                    .foregroundColor(.orange)
+                                
+                                Text("fahad")
+                                    .font(.title)
+                                    .foregroundColor(.white)
+                                 
+                            }
+                            Text("Explore a Variety of Tasty Options")
+                                .font(.subheadline)
+                                .foregroundColor(.orange)
+                                .padding(.bottom, 10)
+                        }
+                 
+                        
+                        
+                        Spacer()
+                        
+                        Image("fahad")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 50, height: 50)
+                            .clipShape(Circle())
+                            .overlay(Circle().stroke(Color.orange, lineWidth: 2))
+                    }
+                    
+                    VStack(alignment: .leading, spacing: 10) {
+                        HStack {
+                            Text("Discover Delicious Dishes")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .italic()
+                            
+                 
+                        }
+                        
+                      
+                        TextField("",text: $searchText,
+                                   
+                                       prompt: Text("Discover Tasty Delights")
+                            .foregroundColor(.orange.opacity(0.8))
+                                  )
+                      
+                            .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15)) // Increase padding for better visual appeal
+                            .frame(maxWidth: .infinity) // Expand TextField to full width
+                            .background(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(Color.gray, lineWidth: 2)
+                                    .shadow(color: .gray, radius: 3, x: 1, y: 1) // Add shadow to the border
+                            )
+                            .accentColor(.orange) // Set the cursor and selection color to orange
+                            .foregroundColor(.white) // Set text color to white
+                            .font(.body) // Set text font size
+                            .padding(.horizontal, 20) // Add horizontal padding for better visual spacing
+ // Add shadow to the TextField
+                    }
+                }
+
+
+                
+              
                 VStack(alignment: .leading, spacing: 20) {
                     Text("Filter by Category")
-                        .font(.title)
+                        .font(.subheadline)
                         .fontWeight(.bold)
                         .padding(.horizontal)
                     
@@ -50,7 +119,7 @@ struct HomeView: View {
                             
                         }
                     }
-                    .padding(.horizontal)
+                  
                 }
                 .padding(.top, 20)
             }
@@ -63,6 +132,20 @@ struct HomeView: View {
     private var filteredFoodItems: [FoodItem] {
         viewModel.foodItems.filter { $0.category == selectedCategory }
     }
+    private var greetingText: String {
+            let calendar = Calendar.current
+            let hour = calendar.component(.hour, from: Date())
+            
+            switch hour {
+            case 6..<12:
+                return "Good Morning"
+            case 12..<18:
+                return "Good Afternoon"
+            default:
+                return "Good Evening"
+            }
+        }
+    
 }
 
 

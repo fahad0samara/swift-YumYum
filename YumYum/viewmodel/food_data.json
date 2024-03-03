@@ -54,6 +54,34 @@
         "imageName": "beef_burger"
     },
     {
+       "name": "Chicken Burger",
+       "description": "Grilled chicken breast topped with crispy lettuce, tomato slices, and mayonnaise, served on a sesame seed bun.",
+       "price": 9.99,
+       "calories": 600,
+       "category": "Burgers",
+       "ingredients": ["Grilled chicken breast", "Lettuce", "Tomato", "Mayonnaise", "Sesame seed bun"],
+       "imageName": "chicken_burger"
+     },
+     {
+       "name": "Veggie Burger",
+       "description": "Delicious veggie patty made from black beans, corn, and vegetables, served with avocado, lettuce, and tomato on a whole wheat bun.",
+       "price": 8.99,
+       "calories": 500,
+       "category": "Burgers",
+       "ingredients": ["Black bean patty", "Corn", "Avocado", "Lettuce", "Tomato", "Whole wheat bun"],
+       "imageName": "veggie_burger"
+     },
+     {
+       "name": "Double Cheeseburger",
+       "description": "Two juicy beef patties topped with melted cheese, crisp lettuce, sliced onions, tangy pickles, and special sauce, served on a toasted bun.",
+       "price": 12.99,
+       "calories": 850,
+       "category": "Burgers",
+       "ingredients": ["Beef patties", "Cheese", "Lettuce", "Onions", "Pickles", "Special sauce", "Toasted bun"],
+       "imageName": "double_cheeseburger"
+     },
+    
+    {
         "name": "Caesar Wrap",
         "description": "Grilled chicken, romaine lettuce, parmesan cheese, and Caesar dressing wrapped in a flour tortilla.",
         "price": 9.49,
