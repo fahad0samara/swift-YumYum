@@ -151,7 +151,6 @@
 				2976F5D42B923D4D003D01AF /* components */,
 				2976F5C72B91BB16003D01AF /* HomeView.swift */,
 				29FE89B32B9478F100FA5CF8 /* FoodDetailsView.swift */,
-				29FE89B52B94CEFF00FA5CF8 /* SearchResultsView.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -159,6 +158,7 @@
 		2976F5D42B923D4D003D01AF /* components */ = {
 			isa = PBXGroup;
 			children = (
+				29FE89B52B94CEFF00FA5CF8 /* SearchResultsView.swift */,
 				2976F5D52B923D74003D01AF /* CategoryButton.swift */,
 				2976F5D72B923DF2003D01AF /* FeaturedRecipeCard.swift */,
 				29FE89B72B94DB9B00FA5CF8 /* SearchBarView.swift */,

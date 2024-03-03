@@ -7,8 +7,12 @@
 
 import SwiftUI
 
-struct FeaturedRecipeCard0: View {
+struct FeaturedRecipeCard: View {
     let foodItem: FoodItem
+    let addToCartAction: () -> Void
+    let addToFavoritesAction: () -> Void
+
+
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -24,7 +28,8 @@ struct FeaturedRecipeCard0: View {
                     )
                 
                 Button(action: {
-                    // Action for adding to favorites
+                    addToFavoritesAction()
+
                 }) {
                     Image(systemName: "heart.fill")
                         .foregroundColor(.white)
@@ -52,7 +57,7 @@ struct FeaturedRecipeCard0: View {
                     Spacer()
                     
                     Button(action: {
-                        // Action for adding to cart
+                        addToCartAction() // Add to cart action
                     }) {
                         Image(systemName: "cart.fill")
                             .foregroundColor(.orange)
@@ -64,5 +69,4 @@ struct FeaturedRecipeCard0: View {
         .frame(width: 150)
     }
 }
-
 
