@@ -6,6 +6,8 @@ struct HomeView: View {
     @EnvironmentObject var cartViewModel: CartViewModel
     @EnvironmentObject var favoritesViewModel: FavoritesViewModel
     @State var searchText:String = ""
+    @State private var isSearchActive = false
+
     var body: some View {
         NavigationStack{
             ScrollView {
@@ -21,14 +23,14 @@ struct HomeView: View {
                                 Text("fahad")
                                     .font(.title)
                                     .foregroundColor(.white)
-                                 
+                                
                             }
                             Text("Explore a Variety of Tasty Options")
                                 .font(.subheadline)
                                 .foregroundColor(.orange)
                                 .padding(.bottom, 10)
                         }
-                 
+                        
                         
                         
                         Spacer()
@@ -40,39 +42,10 @@ struct HomeView: View {
                             .clipShape(Circle())
                             .overlay(Circle().stroke(Color.orange, lineWidth: 2))
                     }
-                    
-                    VStack(alignment: .leading, spacing: 10) {
-                        HStack {
-                            Text("Discover Delicious Dishes")
-                                .font(.title2)
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-                                .italic()
-                            
-                 
-                        }
-                        
-                      
-                        TextField("",text: $searchText,
-                                   
-                                       prompt: Text("Discover Tasty Delights")
-                            .foregroundColor(.orange.opacity(0.8))
-                                  )
-                      
-                            .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15)) // Increase padding for better visual appeal
-                            .frame(maxWidth: .infinity) // Expand TextField to full width
-                            .background(
-                                RoundedRectangle(cornerRadius: 20)
-                                    .stroke(Color.gray, lineWidth: 2)
-                                    .shadow(color: .gray, radius: 3, x: 1, y: 1) // Add shadow to the border
-                            )
-                            .accentColor(.orange) // Set the cursor and selection color to orange
-                            .foregroundColor(.white) // Set text color to white
-                            .font(.body) // Set text font size
-                            .padding(.horizontal, 20) // Add horizontal padding for better visual spacing
- // Add shadow to the TextField
-                    }
                 }
+                    
+                    SearchBarView(searchText: $searchText, isSearchActive: $isSearchActive)
+
 
 
                 

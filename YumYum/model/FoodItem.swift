@@ -7,7 +7,6 @@
 
 import Foundation
 
-import Foundation
 
 struct FoodItem: Identifiable, Codable {
     let id = UUID()

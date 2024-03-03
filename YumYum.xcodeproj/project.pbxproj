@@ -26,6 +26,8 @@
 		2976F5D62B923D74003D01AF /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976F5D52B923D74003D01AF /* CategoryButton.swift */; };
 		2976F5D82B923DF2003D01AF /* FeaturedRecipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2976F5D72B923DF2003D01AF /* FeaturedRecipeCard.swift */; };
 		29FE89B42B9478F100FA5CF8 /* FoodDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FE89B32B9478F100FA5CF8 /* FoodDetailsView.swift */; };
+		29FE89B62B94CEFF00FA5CF8 /* SearchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FE89B52B94CEFF00FA5CF8 /* SearchResultsView.swift */; };
+		29FE89B82B94DB9B00FA5CF8 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FE89B72B94DB9B00FA5CF8 /* SearchBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		2976F5D52B923D74003D01AF /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		2976F5D72B923DF2003D01AF /* FeaturedRecipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedRecipeCard.swift; sourceTree = "<group>"; };
 		29FE89B32B9478F100FA5CF8 /* FoodDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsView.swift; sourceTree = "<group>"; };
+		29FE89B52B94CEFF00FA5CF8 /* SearchResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsView.swift; sourceTree = "<group>"; };
+		29FE89B72B94DB9B00FA5CF8 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 				2976F5D42B923D4D003D01AF /* components */,
 				2976F5C72B91BB16003D01AF /* HomeView.swift */,
 				29FE89B32B9478F100FA5CF8 /* FoodDetailsView.swift */,
+				29FE89B52B94CEFF00FA5CF8 /* SearchResultsView.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 			children = (
 				2976F5D52B923D74003D01AF /* CategoryButton.swift */,
 				2976F5D72B923DF2003D01AF /* FeaturedRecipeCard.swift */,
+				29FE89B72B94DB9B00FA5CF8 /* SearchBarView.swift */,
 			);
 			name = components;
 			sourceTree = "<group>";
@@ -249,9 +255,11 @@
 				2976F5C02B91A68F003D01AF /* SignUpView.swift in Sources */,
 				2976F5D02B91CD69003D01AF /* FoodItem.swift in Sources */,
 				29FE89B42B9478F100FA5CF8 /* FoodDetailsView.swift in Sources */,
+				29FE89B82B94DB9B00FA5CF8 /* SearchBarView.swift in Sources */,
 				2976F5C82B91BB16003D01AF /* HomeView.swift in Sources */,
 				2976F5C32B91A9FD003D01AF /* LoginView.swift in Sources */,
 				2976F5D62B923D74003D01AF /* CategoryButton.swift in Sources */,
+				29FE89B62B94CEFF00FA5CF8 /* SearchResultsView.swift in Sources */,
 				2976F5CA2B91BB2D003D01AF /* FavoritView.swift in Sources */,
 				293937A52B9313C100D2B535 /* CartItem.swift in Sources */,
 				2976F5AF2B919D6D003D01AF /* YumYumApp.swift in Sources */,
