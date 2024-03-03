@@ -7,6 +7,8 @@
 
 import Foundation
 
+import Foundation
+
 struct FoodItem: Identifiable, Codable {
     let id = UUID()
     let name: String
@@ -14,6 +16,8 @@ struct FoodItem: Identifiable, Codable {
     let price: Double
     let calories: Int
     let category: String
-    let imageName:String
+    let ingredients: [String] 
+    let imageName: String
 }
+
 

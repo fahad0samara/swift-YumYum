@@ -59,21 +59,22 @@ struct CartView: View {
                     Spacer()
                 }
                 .padding(.vertical, 10)
+                Button(action: {
+                    // Action for checkout or payment
+                }) {
+                    Text("Checkout")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.orange)
+                        .cornerRadius(10)
+                        .padding(.horizontal, 40)
+                }
+                .padding()
             }
             
-            Button(action: {
-                // Action for checkout or payment
-            }) {
-                Text("Checkout")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.orange)
-                    .cornerRadius(10)
-                    .padding(.horizontal, 40)
-            }
-            .padding()
+     
         }
         .navigationBarTitle("Cart")
     }

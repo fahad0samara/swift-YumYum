@@ -5,6 +5,7 @@
         "price": 9.99,
         "calories": 800,
         "category": "Pizza",
+        "ingredients": ["Tomato sauce", "Mozzarella cheese", "Fresh basil"],
         "imageName": "margherita_pizza"
     },
     {
@@ -13,6 +14,7 @@
         "price": 14.99,
         "calories": 600,
         "category": "Seafood",
+        "ingredients": ["Salmon", "Lemon", "Herbs"],
         "imageName": "grilled_salmon"
     },
     {
@@ -21,6 +23,7 @@
         "price": 11.99,
         "calories": 450,
         "category": "Salad",
+        "ingredients": ["Romaine lettuce", "Grilled chicken", "Parmesan cheese", "Croutons", "Caesar dressing"],
         "imageName": "chicken_caesar_salad"
     },
     {
@@ -29,6 +32,7 @@
         "price": 8.99,
         "calories": 400,
         "category": "Vegetarian",
+        "ingredients": ["Assorted fresh vegetables", "Savory sauce"],
         "imageName": "vegetable_stir_fry"
     },
     {
@@ -37,6 +41,7 @@
         "price": 12.99,
         "calories": 850,
         "category": "Pasta",
+        "ingredients": ["Pasta", "Eggs", "Cheese", "Pancetta", "Black pepper"],
         "imageName": "spaghetti_carbonara"
     },
     {
@@ -45,6 +50,7 @@
         "price": 10.99,
         "calories": 700,
         "category": "Burgers",
+        "ingredients": ["Beef patty", "Cheese", "Lettuce", "Tomato", "Pickles", "Toasted bun"],
         "imageName": "beef_burger"
     },
     {
@@ -53,6 +59,7 @@
         "price": 9.49,
         "calories": 550,
         "category": "Wraps",
+        "ingredients": ["Grilled chicken", "Romaine lettuce", "Parmesan cheese", "Caesar dressing", "Flour tortilla"],
         "imageName": "caesar_wrap"
     },
     {
@@ -61,6 +68,7 @@
         "price": 13.49,
         "calories": 650,
         "category": "Italian",
+        "ingredients": ["Risotto", "Mushrooms", "Onions", "Garlic", "Parmesan cheese"],
         "imageName": "mushroom_risotto"
     },
     {
@@ -69,6 +77,7 @@
         "price": 11.99,
         "calories": 500,
         "category": "Mexican",
+        "ingredients": ["Grilled shrimp", "Soft corn tortillas", "Cabbage slaw", "Avocado", "Cilantro-lime sauce"],
         "imageName": "shrimp_tacos"
     },
     {
@@ -77,6 +86,7 @@
         "price": 10.99,
         "calories": 750,
         "category": "Pizza",
+        "ingredients": ["Fresh vegetables", "Melted cheese"],
         "imageName": "vegetable_pizza"
     },
     {
@@ -85,6 +95,7 @@
         "price": 13.99,
         "calories": 600,
         "category": "Chicken",
+        "ingredients": ["Chicken breasts", "Lemon", "Herbs"],
         "imageName": "lemon_herb_chicken"
     },
     {
@@ -93,6 +104,7 @@
         "price": 9.49,
         "calories": 350,
         "category": "Salad",
+        "ingredients": ["Fresh tomatoes", "Mozzarella cheese", "Basil", "Balsamic glaze"],
         "imageName": "caprese_salad"
     },
     {
@@ -101,6 +113,7 @@
         "price": 10.49,
         "calories": 600,
         "category": "Mexican",
+        "ingredients": ["Seasoned ground beef", "Crunchy taco shells", "Lettuce", "Cheese", "Salsa"],
         "imageName": "beef_tacos"
     },
     {
@@ -109,6 +122,7 @@
         "price": 12.99,
         "calories": 700,
         "category": "Italian",
+        "ingredients": ["Pasta", "Marinara sauce", "Vegetables", "Cheese"],
         "imageName": "vegetable_lasagna"
     },
     {
@@ -117,6 +131,7 @@
         "price": 13.99,
         "calories": 800,
         "category": "Pasta",
+        "ingredients": ["Fettuccine pasta", "Creamy Alfredo sauce", "Grilled chicken"],
         "imageName": "chicken_alfredo"
     }
 ]

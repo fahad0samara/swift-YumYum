@@ -6,57 +6,60 @@ struct HomeView: View {
     @EnvironmentObject var cartViewModel: CartViewModel
     @EnvironmentObject var favoritesViewModel: FavoritesViewModel
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
-                Text("Filter by Category")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding(.horizontal)
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 15) {
-                        ForEach(viewModel.categories, id: \.self) { category in
-                            CategoryButton(category: category, isSelected: category == selectedCategory)
-                                .onTapGesture {
-                                    selectedCategory = category
-                                }
+        NavigationStack{
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    Text("Filter by Category")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding(.horizontal)
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 15) {
+                            ForEach(viewModel.categories, id: \.self) { category in
+                                CategoryButton(category: category, isSelected: category == selectedCategory)
+                                    .onTapGesture {
+                                        selectedCategory = category
+                                    }
+                            }
+                        }
+                        .padding(.horizontal)
+                    }
+                    
+                    Text("Featured Recipes")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding(.horizontal)
+                    
+                    // Featured recipes list
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
+                        ForEach(filteredFoodItems) { foodItem in
+                            NavigationLink(destination: FoodDetailsView(foodItem: foodItem)) {
+                                
+                                FeaturedRecipeCard(foodItem: foodItem,
+                                                   addToCartAction: { cartViewModel.addItem(foodItem) },
+                                                   addToFavoritesAction: { favoritesViewModel.addToFavorites(foodItem) })
+                                
+                            }
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                         }
                     }
                     .padding(.horizontal)
                 }
-                
-                Text("Featured Recipes")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding(.horizontal)
-                
-                // Featured recipes list
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
-                    ForEach(filteredFoodItems) { foodItem in
-                        FeaturedRecipeCard(foodItem: foodItem,
-                                           addToCartAction: { cartViewModel.addItem(foodItem) },
-                                           addToFavoritesAction: { favoritesViewModel.addToFavorites(foodItem) })
-                    
-                
-                        
-                                
-                        
-
-
-
-
-                    }
-                }
-                .padding(.horizontal)
+                .padding(.top, 20)
             }
-            .padding(.top, 20)
-        }
-        .navigationBarTitle("Home")
-        .onAppear {
-            viewModel.loadFoodItems()
+            .navigationBarTitle("")
+            .onAppear {
+                viewModel.loadFoodItems()
+            }
         }
     }
-    
     private var filteredFoodItems: [FoodItem] {
         viewModel.foodItems.filter { $0.category == selectedCategory }
     }
